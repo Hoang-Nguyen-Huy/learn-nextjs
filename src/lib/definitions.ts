@@ -27,3 +27,10 @@ export type FormState =
       message?: string
     }
   | undefined
+
+export type SessionPayload = {
+  id: number;
+  username: string;
+  iat?: number; // issued at (automatically added by `jose`)
+  exp?: number; // expiration time (automatically added by `jose`)
+};
